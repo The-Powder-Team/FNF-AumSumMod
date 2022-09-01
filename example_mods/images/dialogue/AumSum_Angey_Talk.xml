@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="aumsum angey.png">
+<SubTexture name="aumsum angey talk0000" x="0" y="0" width="428" height="619" frameX="0" frameY="0" frameWidth="428" frameHeight="619" />
+<SubTexture name="aumsum angey talk0001" x="428" y="0" width="428" height="619" frameX="0" frameY="0" frameWidth="428" frameHeight="619" />
+<SubTexture name="aumsum angey talk0002" x="856" y="0" width="428" height="619" frameX="0" frameY="0" frameWidth="428" frameHeight="619" />
+<SubTexture name="aumsum angey talk0003" x="0" y="619" width="428" height="619" frameX="0" frameY="0" frameWidth="428" frameHeight="619" />
+<SubTexture name="aumsum angey talk0004" x="428" y="619" width="428" height="619" frameX="0" frameY="0" frameWidth="428" frameHeight="619" />
+<SubTexture name="aumsum angey00000" x="428" y="619" width="428" height="619" frameX="0" frameY="0" frameWidth="428" frameHeight="619" />
+</TextureAtlas>

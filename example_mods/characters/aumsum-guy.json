@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "guy idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				78,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "guy singing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				78,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "guy singing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				78,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "guy singing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				78,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "guy singing",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/aumsum_guy",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "guy",
+	"flip_x": false,
+	"healthbar_colors": [
+		244,
+		220,
+		189
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,89 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "...",
+			"boxState": "normal",
+			"speed": 0.3,
+			"portrait": "aumsum-oh-noa"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "NO! Please don't use your phase!"
+		},
+		{
+			"expression": "confused",
+			"text": "bep?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "See? I warned you...",
+			"boxState": "normal",
+			"speed": 0.0749999999999996,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Stop bluffing!",
+			"boxState": "angry",
+			"speed": 0.025,
+			"portrait": "aumsum-oh-no"
+		},
+		{
+			"expression": "talk",
+			"text": "And him...",
+			"boxState": "normal",
+			"speed": 0.15,
+			"portrait": "aumsum-oh-no"
+		},
+		{
+			"expression": "confused",
+			"text": "beep bop skepoop po poo pee pop peop?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "What him?",
+			"boxState": "normal",
+			"speed": 0.0499999999999999,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "confused",
+			"text": "beep?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "He is the one who is bluffing the most... I have no choice but I am going to do something to him...",
+			"boxState": "normal",
+			"speed": 0.125,
+			"portrait": "aumsum-oh-no"
+		},
+		{
+			"expression": "talk",
+			"text": "I don't know what that is yet... but all I know is that you will be going down. Goodbye...",
+			"boxState": "normal",
+			"speed": 0.1,
+			"portrait": "aumsum-oh-no"
+		},
+		{
+			"expression": "confused",
+			"text": "BEEP!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		}
+	]
+}

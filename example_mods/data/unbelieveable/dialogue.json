@@ -1,0 +1,75 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "HEY!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "aumsum-mad"
+		},
+		{
+			"expression": "confused",
+			"text": "Beep?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "excited",
+			"text": "See? I told ya.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "That's not fair! How can you even lose when singing?",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "aumsum-mad"
+		},
+		{
+			"expression": "confused",
+			"text": "Beep boop skoop?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Let's try again. Try not to activate your final pha-",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Fine. If he wins, then that will be the last straw!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "aumsum-mad"
+		},
+		{
+			"expression": "shocked",
+			"text": "BEEP!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Alright! GET READY FOR THIS!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "aumsum-mad"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Fine, don't listen..."
+		}
+	]
+}

@@ -1,0 +1,130 @@
+{
+	"dialogue": [
+		{
+			"expression": "excited",
+			"text": "Wow! That was amazing!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "I know! Right?!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "excited",
+			"text": "Boop!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "pissed",
+			"text": "But can you do more of it?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "You want to me go again?!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Yes!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Boop!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Ha Ha! You're Bluffing!",
+			"boxState": "normal",
+			"portrait": "aumsum-neww",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "Please listen! This person rap battling you is a boyfriend who is dating a daughter of an ex-rockstar.",
+			"boxState": "normal",
+			"portrait": "no-one",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "Really?",
+			"boxState": "normal",
+			"portrait": "aumsum-neww",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "Yes!",
+			"boxState": "normal",
+			"portrait": "no-one",
+			"speed": 0.05
+		},
+		{
+			"expression": "confused",
+			"text": "Thanks for pointing that out, whoever you are...",
+			"boxState": "normal",
+			"portrait": "gf",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "I will bet that this time you will lose!",
+			"boxState": "normal",
+			"portrait": "no-one",
+			"speed": 0.05
+		},
+		{
+			"expression": "excited",
+			"text": "This time. I am going to prove you wrong!",
+			"boxState": "normal",
+			"portrait": "aumsum-neww",
+			"speed": 0.05
+		},
+		{
+			"expression": "pissed",
+			"text": "Beep boop poo boo!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Alright then!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Let's go!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "It's time to get fun-KAY!",
+			"boxState": "normal",
+			"portrait": "aumsum-neww",
+			"speed": 0.05
+		}
+	]
+}

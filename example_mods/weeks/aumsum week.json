@@ -1,0 +1,58 @@
+{
+	"storyName": "What If Everyone started Gettin' Freaky on a Friday Night?",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "aumsum",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"aumsum-remakkeee",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Smart-Learning",
+			"aumsum",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Topic",
+			"aumsum",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Unbelieveable",
+			"aumsum-angry",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Hangry",
+			"aumsum-angey",
+			[
+				255,
+				255,
+				255
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Custom Week"
+}

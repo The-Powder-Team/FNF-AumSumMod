@@ -1,0 +1,204 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Not again...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.15,
+			"portrait": "aumsum-oh-no"
+		},
+		{
+			"expression": "confused",
+			"text": "Boop?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "I-I-",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.11,
+			"portrait": "aumsum-oh-no"
+		},
+		{
+			"expression": "talk",
+			"text": "Sorry for the destruction he caused. He didn't think that it would go this far...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.075,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "confused",
+			"text": "Beep?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"sound": "",
+			"speed": 0.06,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Thanks for telling us again, i gues..."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "shocked",
+			"text": "But still! What is he gonna do to us?"
+		},
+		{
+			"expression": "talk",
+			"text": "I... will...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.25,
+			"portrait": "aumsum-oh-no"
+		},
+		{
+			"expression": "talk",
+			"text": "Not do anything to you! Ta-da!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.04,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Boop beep?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Because I am so sorry for everything I did to the world around me. Will you forgive me?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Boop beep bop skepoop!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "aumsum-neww",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Really? Thanks!"
+		},
+		{
+			"expression": "talk",
+			"text": "Alright, let's put everything back together and continue.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "*POOF*",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Now, can you attend the park talent show?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Beep!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Yes, we all can sign up!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Boop?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Really?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "aumsum-neww",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yes! Of course!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "Beep boop!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yay!"
+		},
+		{
+			"expression": "talk",
+			"text": "Thus, after this process, everything will eventually be resolved or not depending on the circumstances.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "This proves that, yes, we are able to get freaky on a friday night.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one"
+		}
+	]
+}

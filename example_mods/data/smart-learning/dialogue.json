@@ -1,0 +1,187 @@
+{
+	"dialogue": [
+		{
+			"expression": "excited",
+			"text": "Topic: Friday Night",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "no-one",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Should we get freaky on a friday night?"
+		},
+		{
+			"expression": "talk",
+			"text": "Obviously! Because we will be able to freak people out!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Ugh! You're just unbelievable!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "excited",
+			"text": "When getting freaky on a friday night, it is important to note that someone will wanna rap battle you.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Who will come up and rap battle me?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Listen, there is a Park Talent Show over there which you can sign up for. Maybe you can sing there.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Oh yeah! I see it.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Huh?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Boop!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Wait... what was that?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "It might be the person who wants to rap battle you.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Boop beep!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Look, there he is!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "AAAAAAAAAAAAAHH!!!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "shocked",
+			"text": "BEEP BOO PEE!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "shocked",
+			"text": "Huh?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "W-who are you?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "Beep!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "This will be the person rap battling you.",
+			"boxState": "normal",
+			"speed": 0.09,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "pissed",
+			"text": "Beep bop bap bep skepoop",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "I don't even understand what he is saying.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "confused",
+			"text": "BEEP Bap sko poop bop beep",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "See? It does looks like it wants to rap battle you.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "no-one"
+		},
+		{
+			"expression": "talk",
+			"text": "Ohhhhh! So that's who he is!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		},
+		{
+			"expression": "talk",
+			"text": "He wants to rap? Alright then, let's go!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "aumsum-neww"
+		}
+	]
+}

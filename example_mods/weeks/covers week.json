@@ -1,0 +1,94 @@
+{
+	"storyName": "Custom Covers Ft. AumSum",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "covers",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Comecful",
+			"aumsum",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"God Eater",
+			"aumsum-angey",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Cheating",
+			"aumsum-3d",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Thunderstorm",
+			"aumsum-thunda",
+			[
+				220,
+				216,
+				197
+			]
+		],
+		[
+			"Furiosity",
+			"aumsum-has-lost-it",
+			[
+				198,
+				2,
+				2
+			]
+		],
+		[
+			"Pineappled",
+			"aumsum-pineappled",
+			[
+				220,
+				217,
+				200
+			]
+		],
+		[
+			"Schooled",
+			"aumsum-narrator-new",
+			[
+				230,
+				240,
+				200
+			]
+		],
+		[
+			"Squid-Games",
+			"aumsum-angry",
+			[
+				255,
+				255,
+				255
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekName": "Custom Covers"
+}
