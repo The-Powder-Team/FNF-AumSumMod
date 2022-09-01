@@ -22,7 +22,7 @@ end
 
 
 function onCreatePost()
-    makeLuaText('songText', songName .. ' - ' .. getProperty('storyDifficultyText') .. ' | FNF Vs. AumSum (PE 0.6.2+) | ' .. Quotes[getRandomInt(1, 11)], 0, 2, 701);
+    makeLuaText('songText', songName .. ' - ' .. getProperty('storyDifficultyText') .. ' | FNF Vs. AumSum v1.5 (PE 0.6.2+) | ' .. Quotes[getRandomInt(1, 11)], 0, 2, 701);
     setTextAlignment('songText', 'left');
     setTextSize('songText', 15);
     setTextBorder('songText', 1, '000000');
