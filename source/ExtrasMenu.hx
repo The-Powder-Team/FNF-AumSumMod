@@ -21,7 +21,7 @@ class ExtrasMenu extends MusicBeatState
 	var selector:FlxText;
 	var curSelected:Int = 0;
 	
-	var controlsStrings:Array<String> = ['CREDITS', 'DEVLOG', 'COMMUNITY' #if MODS_ALLOWED 'MODS', 'EDITORS' #end];
+	var controlsStrings:Array<String> = ['CREDITS', 'DEVLOG', 'COMMUNITY', #if MODS_ALLOWED 'MODS', 'EDITORS' #end];
 	
 	private var grpControls:FlxTypedGroup<Alphabet>;
 	
