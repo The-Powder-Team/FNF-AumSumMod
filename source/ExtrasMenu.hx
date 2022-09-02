@@ -21,7 +21,7 @@ class ExtrasMenu extends MusicBeatState
 	var selector:FlxText;
 	var curSelected:Int = 0;
 	
-	var controlsStrings:Array<String> = ['CREDITS', 'DEVLOG', #if MODS_ALLOWED 'MODS', 'EDITORS' #end];
+	var controlsStrings:Array<String> = ['CREDITS', 'DEVLOG', 'COMMUNITY' #if MODS_ALLOWED 'MODS', 'EDITORS' #end];
 	
 	private var grpControls:FlxTypedGroup<Alphabet>;
 	
@@ -66,8 +66,10 @@ class ExtrasMenu extends MusicBeatState
 				case 1:
 				FlxG.openURL("https://al-al.itch.io/friday-night-funkin-vs-aumsum/devlog");
 				case 2:
-				FlxG.switchState(new ModsMenuState());	
+				FlxG.openURL('https://al-al.itch.io/friday-night-funkin-vs-aumsum/community');
 				case 3:
+				FlxG.switchState(new ModsMenuState());	
+				case 4:
 				FlxG.switchState(new editors.MasterEditorMenu());	
 			}
 			//	var funnystring = Std.string(curSelected);
