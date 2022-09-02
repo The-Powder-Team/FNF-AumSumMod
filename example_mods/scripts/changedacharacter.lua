@@ -1,184 +1,276 @@
-local allowCountdown = false
-local inSelection = true
-local ofsx = -210
-local ofsy = 0
-local mult = 1.25
-characterNames = {'bf', 'mickey-toots', 'dad', 'diego-player'} --character json name
-characterDisplays = {'Boyfriend', 'Mickey Toots', 'Daddy Dearest', 'Diego'} --display name for text
-characterLimit = {4, 2, 1, 1} --how many variations does the character have
-maxpage = 4 --amount of characters u have
-variation = 1 -- 1 = original
-local page = 1
-local inSelection = true
-function onCreate()
-  if allowCountdown == false then
-    makeLuaSprite('fader', '', -200, -200)
-    makeGraphic('fader', 1920, 1080, '000000')
-    addLuaSprite('fader', true)
-    setScrollFactor('fader', 0, 0)
-    setProperty('fader.alpha', 0)
-    setObjectCamera('fader', 'other')
+---- CONFIG
+-- You can edit aspects about the script below
 
-  	makeLuaSprite('1', 'stageback', -600, -300);
-  	setScrollFactor('1', 0.9, 0.9);
+local showSongBF = true -- Whether the chart's BF should be shown as an option, disabling might be useful if you manually registered them and the chart's BF shows wrong
 
-  	makeLuaSprite('2', 'stagefront', -650, 600);
-  	setScrollFactor('2', 0.9, 0.9);
-  	scaleObject('2', 1.1, 1.1);
 
-		makeLuaSprite('3', 'stage_light', -125, -100);
-		setScrollFactor('3', 0.9, 0.9);
-		scaleObject('3', 1.1, 1.1);
+local allowStoryMode = false -- If this script can be used on storymode or not
+local song = 'breakfast'; --If you want to have a song play while people are in this menu. Remove this line entirely if you don't want one.
+local displayNameX = -200; -- Offset for Display name
+local displayNameY = 0; -- Offset for Display name
+local customCameraPos = false
+local camX = 300
+local camY = 300
 
-		makeLuaSprite('4', 'stage_light', 1225, -100);
-		setScrollFactor('4', 0.9, 0.9);
-		scaleObject('4', 1.1, 1.1);
-		setProperty('4.flipX', true); --mirror sprite horizontally
+local characterList = { -- The list of characters
+	{
+		name = "bf",
+		displayName = "Boyfriend",
+	},
+	{
+		name = "bf-car",
+		displayName = "Windy Boyfriend",
+	},
+	{
+		name = "bf-christmas",
+		displayName = "Festive Boyfriend",
+	},
+	{
+		name = "aumsum-new",
+		displayName = "AumSum",
+	},
+	{
+		name = "aumsum-angrie",
+		displayName = "Angry AumSum",
+	},
+	{
+		name = "aumsum-bf",
+		displayName = "AumSum BF",
+	},
+	{
+		name = "aumsum-narrator-new",
+		displayName = "AumSum Narrator",
+	},
+	{
+		name = "aumsum-bruh",
+		displayName = "AumSum bruh",
+	},
+	{
+		name = "aumsussy",
+		displayName = "AumSUSSY",
+	},
+}
 
-		makeLuaSprite('5', 'stagecurtains', -500, -300);
-		setScrollFactor('5', 1.3, 1.3);
-		scaleObject('5', 0.9, 0.9);
 
-  	addLuaSprite('1', false);
-  	addLuaSprite('2', false);
-  	addLuaSprite('3', false);
-  	addLuaSprite('4', false);
-  	addLuaSprite('5', false);
-    makeLuaText('text1', characterDisplays[page], 600, 15, 350)
-    setTextSize('text1', 50);--Sets text size
-    setTextWidth('text1', 600);--Sets text width
-    addLuaText('text1')
-    setProperty('gf.visible', false)
-    setProperty('dad.visible', false)
-    playMusic('offsetSong')
-  end
+-- The actual script.
+
+local changedChar = true
+local isOnCharMenu = false;
+local curCharacter = 1
+local shownID = -10000
+local befPaused = false
+local displayNameY = 0;
+local origBF = "";
+local LY = 0;
+
+
+function setupText(name,text,x,y)
+	makeLuaText(name, text, x, y, 100);
+	setTextSize(name, 48);
+	setProperty(name ..'.borderColor', getColorFromHex('000000'));
+	setProperty(name ..'.borderSize', 1.2);
 end
+
+function onCreate()
+	if(not allowStoryMode and isStoryMode)then 
+		onStartCountdown = nil;
+		onTimerCompleted = nil;
+		onPause = nil;
+		onUpdate = nil;
+		updateCharacter = nil;
+
+		return;
+	end -- Close script if in story mode, remove this or n
+	--Theres nothing special here just all the extra stuff. Add or edit whatever you want.
+	setProperty('inCutscene', true);
+	setProperty('generatedMusic', false);
+	setProperty('boyfriend.stunned', true);
+end
+
 function onStartCountdown()
-	-- Block the first countdown and start a timer of 0.8 seconds to play the dialogue
-	if not allowCountdown and not isStoryMode and not seenCutscene then
+
+	if not hasSelectedCharacter and not isOnCharMenu then
+		isOnCharMenu = true
+		makeLuaText('displayname', characterList[curCharacter].displayName, getProperty("boyfriend.x") + displayNameX, getProperty("boyfriend.y") + displayNameY, 100);
+		setProperty('displayname.borderColor', getColorFromHex('000000'));
+		setProperty('displayname.borderSize', 1.2);
+		setObjectCamera('displayname', 'camGame');
+		setTextSize('displayname', 48);
+		setTextAlignment("displayName", 'center')
+		displayNameY = getProperty("displayname.y")
+		addLuaText('displayname');
+		cameraSetTarget("boyfriend")
+		setupText('leftarrow', "<", 0, 0)
+		setupText('rightarrow', ">", 0, 0)
+		setObjectCamera('rightarrow', 'camGame');
+		setObjectCamera('leftarrow', 'camGame');
+		addLuaText('leftarrow', true);
+		addLuaText('rightarrow', true);
+		playMusic(song, 1, true);
+		origBF = getProperty("boyfriend.curCharacter")
+		origGF = getProperty("gf.curCharacter")
+		origDAD = getProperty("dad.curCharacter")
+		if(not customCameraPos) then
+			camX = getProperty("camFollow.x")
+			camY = getProperty("camFollow.y")
+		end
+
+		if(showSongBF) then table.insert(characterList,1,{
+			name=origBF,
+			displayName="Player skin from Song"}) 
+		end
 		setProperty('inCutscene', true);
-    setProperty('gf.visible', false)
-    setProperty('dad.visible', false)
-		allowCountdown = true;
+		setProperty('generatedMusic', false);
+		setProperty('boyfriend.stunned', true);
+		-- hasSelectedCharacter = true
+		updateCharacter()
+		setProperty('canPause', true);
+		befPaused = getProperty('canPause')
 		return Function_Stop;
+	end
+	setProperty('canPause', befPaused);
+	setProperty('generatedMusic', true);
+	if changedChar then
+		characterPlayAnim('boyfriend', 'idle', true);
+
+		if(characterList[curCharacter].opponent) then
+			triggerEvent('Change Character', 'dad', characterList[curCharacter].opponent);
+		end
+		if(characterList[curCharacter].gf) then
+			triggerEvent('Change Character', 'gf', characterList[curCharacter].gf);
+		end
+	end
+	setProperty('inCutscene', false);
+	setObjectCamera('boyfriend', 'camGame');
+	setProperty('boyfriend.stunned', false);
+	removeLuaText('leftarrow', true);
+	removeLuaText('rightarrow', true);
+	removeLuaText('displayname', true);
+	pauseSound("music")
+	
+	playMusic(song, 0, false); --I don't know how to stop music there's nothing in the wiki or source its all just for sounds.\
+	return Function_Continue;
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+	if tag == 'wait' then
+		startCountdown()
+	end
+end
+
+function onPause()
+	if(isOnCharMenu) then
+		triggerEvent('Change Character', 'bf', origBF);
+		isOnCharMenu = false
 	end
 	return Function_Continue;
 end
 function onUpdate()
-  if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.ENTER') then
-    if inSelection == true and getProperty('inCutscene') == true then
-      removeLuaText('text1', true)
-      stopSound('offsetSong`')
-      playMusic('gameOverEnd', 0.5)
-      if page < 3 then
-        objectPlayAnimation('boyfriend', 'hey', true)
-      else
-        objectPlayAnimation('boyfriend', 'singUP', true)
-      end
-      runTimer('startsong', 5)
-      runTimer('fadein', 2.5)
-      runTimer('fadedelay', 1.5)
-      setProperty('seenCutscene', true)
-    end
-  end
-  if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.BACKSPACE') then
-    endSong()
-  end
-  if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.RIGHT') then
-    if page < maxpage and inSelection == true then
-      variation = 1
-      page = page+1
-      --debugPrint(page, characterNames[page], characterDisplays[page], variation)
-      setCharacter()
-    end
-  elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.LEFT') then
-    if page > 0 and inSelection == true then
-      variation = 1
-      page = page-1
-      --debugPrint(page, characterNames[page], characterDisplays[page], variation)
-      setCharacter()
-    end
-  end
+	if(not isOnCharMenu) then return end
+	setProperty('boyfriend.stunned', true);
+	-- screenCenter('displayname', 'x');
+	-- screenCenter('boyfriend', 'xy');
+	-- if characterList[curCharacter].y then
+	-- 	setProperty("boyfriend.y",getProperty("boyfriend.y") + characterList[curCharacter].y)
+	-- end
+	-- if characterList[curCharacter].x then
+	-- 	setProperty("boyfriend.y",getProperty("boyfriend.x") + characterList[curCharacter].x)
+	-- end
+	-- scaleObject('boyfriend', 1, 1);
+	if(shownID ~= curCharacter) then -- Only change the character if needed
+		updateCharacter()
+	end
+	if keyJustPressed('left') then
+		curCharacter = curCharacter - 1
+		playSound('scrollMenu', 1);
+		setProperty('leftarrow.y',getProperty("leftarrow.y") - 5)
+		setProperty('leftarrow.color',0x11aa11)
+	
+	elseif keyJustPressed('right') then
+		curCharacter = curCharacter + 1
+		playSound('scrollMenu', 1);
+		setProperty('rightarrow.y',getProperty("rightarrow.y") - 5)
+		setProperty('rightarrow.color',0x11aa11)
+
+	elseif keyJustPressed('accept') then
+		characterPlayAnim('boyfriend', 'hey', false);
+		hasSelectedCharacter = true
+		for i,v in pairs({"leftarrow","rightarrow","displayname"}) do
+			
+			doTweenY(v.."-y", v, getProperty(v..".y") - 20, 1, "cubeout")
+			doTweenAlpha(v.."-a", v, 0, 0.7, "cubeout")
+		end
+		runTimer('wait', 1.8, 1);
+		playSound('confirmMenu', 1);
+		isOnCharMenu = false
+	elseif keyJustPressed('back') then
+		-- playSound('confirmMenu', 1);
+		triggerEvent('Change Character', 'bf', origBF);
+		isOnCharMenu = false
+		hasSelectedCharacter = true
+		changedChar = false
+		startCountdown();
+	end
+	
+	if keyPressed('left') then
+		-- objectPlayAnimation('leftarrow', 'leftpressed', true);
+		setTextSize('leftarrow', 64);
+	elseif keyPressed('right') then
+		-- objectPlayAnimation('rightarrow', 'rightpressed', true);
+		setTextSize('rightarrow', 64);
+	end
+	
+	if keyReleased('left') then
+		-- objectPlayAnimation('leftarrow', 'leftunpressed', true);
+		setTextSize('leftarrow', 48);
+		setProperty('leftarrow.y',LY)
+		setProperty('leftarrow.color',0xFFFFFF)
+	elseif keyReleased('right') then
+		-- objectPlayAnimation('rightarrow', 'rightunpressed', true);
+		setTextSize('rightarrow', 48);
+		setProperty('rightarrow.y',LY)
+		setProperty('rightarrow.color',0xFFFFFF)
+	end
+	
+	if curCharacter > #characterList then
+		curCharacter = 1
+	elseif curCharacter <= 0 then
+		curCharacter = #characterList
+	end
+	
+end
+
+function updateCharacter()
+	triggerEvent('Change Character', 'bf', characterList[curCharacter].name);
+	local char = characterList[curCharacter]
+	setTextString('displayname', char.displayName);
+	setTextAlignment("displayName", 'center')
+
+	-- setObjectCamera('boyfriend', 'camOther');
+	characterPlayAnim('boyfriend', 'idle', true);
+	shownID = curCharacter
 
 
-  if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.UP') then
-    if variation < characterLimit[page] and inSelection == true then
-      variation = variation+1
-      --debugPrint(page, characterNames[page], characterDisplays[page], variation)
-      setCharacter()
-    end
-  elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.DOWN') then
-    if variation > -1 and inSelection == true then
-      variation = variation-1
-      --debugPrint(page, characterNames[page], characterDisplays[page], variation)
-      setCharacter()
-    end
-  end
-  --animation player
-  if inSelection == true then
-    if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.D') then
-      objectPlayAnimation('boyfriend', 'singLEFT', true)
-    elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.J') then
-      objectPlayAnimation('boyfriend', 'singUP', true)
-    elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F') then
-      objectPlayAnimation('boyfriend', 'singDOWN', true)
-    elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.K') then
-      objectPlayAnimation('boyfriend', 'singRIGHT', true)
-    elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.G') then
-      objectPlayAnimation('boyfriend', 'hey', true)
-    elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.H') then
-      objectPlayAnimation('boyfriend', 'idle', true)
-    end
-  end
+	triggerEvent('Change Character', 'dad', char.opponent or origDAD);
+	triggerEvent('Change Character', 'gf', char.gf or origGF);
+	
+
+	setProperty('displayname.y', displayNameY-(char.displayNameY or 0)); -- Inverted for easier editing
+	LY = getProperty('displayname.y')
+	-- triggerEvent("Camera Follow Pos",)
+	setProperty("camGame.target.y",camY + (char.camY or 0))
+	setProperty("camGame.target.x",camX + (char.camX or 0))
+	setProperty('leftarrow.y',LY)
+	setProperty('rightarrow.y',LY)
+	setProperty('leftarrow.x',getProperty("displayname.x"))
+	setProperty('rightarrow.x',getProperty("displayname.x") + getProperty("displayname.width"))
 end
-function onTimerCompleted(tag)
-  if tag == 'startsong' then
-    startCountdown()
-  end
-  if tag == 'fadein' then
-    inSelection = false
-    setProperty('dad.visible', true)
-    if page == 1 then
-      setProperty('gf.visible', true)
-    end
-    removeLuaSprite('1', true)
-    removeLuaSprite('2', true)
-    removeLuaSprite('3', true)
-    removeLuaSprite('4', true)
-    removeLuaSprite('5', true)
-    runTimer('fadeout', 2.5)
-  end
-  if tag == 'fadedelay' then
-    doTweenAlpha('faderfader', 'fader', 1, 0.9, 'linear')
-  end
-end
-function setCharacter()
-  if page > 0 and page < maxpage+1 and inSelection == true then
-    setVariation()
-    setTextString('text1', characterDisplays[page]);
-    --setProperty('boyfriend', 'x', defaultBoyfriendX+characterOfsX[page])
-    --setProperty('boyfriend', 'y', defaultBoyfriendY+characterOfsY[page])
-    triggerEvent('Change Character', 0, characterNames[page]);
-    objectPlayAnimation('boyfriend', 'idle', true)
-  end
-end
-function setVariation()
-  if variation == 1 then
-    characterNames = {'bf', 'mickey-toots', 'dad', 'diego-player'} --character json name
-    characterDisplays = {'Boyfriend', 'Mickey Toots', 'Daddy Dearest', 'Diego'} --display name for text
-  elseif variation == 2 then
-    characterNames = {'bf-christmas', 'mickey-toots', 'dad', 'diego-player'} --character json name
-    characterDisplays = {'Boyfriend (Christmas)', 'Mickey Toots (Raceway)', 'Daddy Dearest', 'Diego'} --display name for text
-  elseif variation == 3 then
-    characterNames = {'bf-car', 'mickey-toots', 'dad', 'diego-player'} --character json name
-    characterDisplays = {'Boyfriend (Week 4)', 'Mickey Toots', 'Daddy Dearest', 'Diego'} --display name for text
-  elseif variation == 4 then
-  characterNames = {'bf-raceway', 'mickey2', 'dad', 'diego-player'} --character json name
-  characterDisplays = {'Boyfriend (Raceway)', 'Mickey Toots (Raceway)', 'Daddy Dearest', 'Diego'} --display name for text
-  end
-end
-function onTweenCompleted(tag)
-  if tag == 'faderfader' then
-    doTweenAlpha('faderfaderBYE', 'fader', 0, 1.4, 'linear')
-  end
-end
+
+
+
+-- Credits:
+
+
+-- XpsxExp#4452: Making the script
+
+-- Superpowers04#3887: Reformatting the script and making it cleaner and such
