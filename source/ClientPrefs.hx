@@ -10,7 +10,7 @@ import Controls;
 class ClientPrefs {
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
-	public static var sideScroll:Bool = false;
+	public static var laneUnderlays:Bool = false;
 	public static var opponentStrums:Bool = true;
 	public static var showFPS:Bool = true;
 	public static var showMEM:Bool = true;
@@ -105,7 +105,7 @@ class ClientPrefs {
 	public static function saveSettings() {
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
-		FlxG.save.data.sideScroll = sideScroll;
+		FlxG.save.data.laneUnderlays = laneUnderlays;
 		FlxG.save.data.opponentStrums = opponentStrums;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.showMEM = showMEM;
@@ -163,8 +163,8 @@ class ClientPrefs {
 		if(FlxG.save.data.middleScroll != null) {
 			middleScroll = FlxG.save.data.middleScroll;
 		}
-		if(FlxG.save.data.sideScroll != null) {
-			sideScroll = FlxG.save.data.sideScroll;
+		if(FlxG.save.data.laneUnderlays != null) {
+			laneUnderlays = FlxG.save.data.laneUnderlays;
 		}
 		if(FlxG.save.data.opponentStrums != null) {
 			opponentStrums = FlxG.save.data.opponentStrums;

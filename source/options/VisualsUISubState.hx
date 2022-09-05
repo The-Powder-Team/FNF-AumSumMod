@@ -77,6 +77,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+		var option:Option = new Option('Lane Underlays',
+		"If unchecked, disables the lane underlays. (Credits to Jason for making them)",
+		'laneUnderlays',
+		'bool',
+		true);
+	    addOption(option);
+
 		var option:Option = new Option('Health Bar Transparency',
 			'How much transparent should the health bar and icons be.',
 			'healthBarAlpha',
