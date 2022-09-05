@@ -892,6 +892,37 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
+		#if HAXE_EXTENSION
+		var filesPushed:Array<String> = [];
+		var foldersToCheck:Array<String> = [Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) + '/')];
+
+		#if MODS_ALLOWED
+		foldersToCheck.insert(0, Paths.mods('data/' + Paths.formatToSongPath(SONG.song) + '/'));
+		if(Paths.currentModDirectory != null && Paths.currentModDirectory.length > 0)
+			foldersToCheck.insert(0, Paths.mods(Paths.currentModDirectory + '/data/' + Paths.formatToSongPath(SONG.song) + '/'));
+		#end
+
+		for (folder in foldersToCheck)
+		{
+			if(FileSystem.exists(folder))
+			{
+				for (file in FileSystem.readDirectory(folder))
+				{
+					if(file == '.hxs' && !filesPushed.contains(file))
+					{
+						var expr = file;
+						var parser = new hscript.Parser();
+						var ast = parser.parseString(expr);
+						var interp = new hscript.Interp();
+						trace(interp.execute(ast));
+						filesPushed.push(file);
+					}
+				}
+			}
+		}
+		#end
+
+
 
 		// STAGE SCRIPTS
 		#if (MODS_ALLOWED && LUA_ALLOWED)
@@ -1282,6 +1313,37 @@ class PlayState extends MusicBeatState
 			}
 		}
 		#end
+
+		#if HAXE_EXTENSION
+		var filesPushed:Array<String> = [];
+		var foldersToCheck:Array<String> = [Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) + '/')];
+
+		#if MODS_ALLOWED
+		foldersToCheck.insert(0, Paths.mods('data/' + Paths.formatToSongPath(SONG.song) + '/'));
+		if(Paths.currentModDirectory != null && Paths.currentModDirectory.length > 0)
+			foldersToCheck.insert(0, Paths.mods(Paths.currentModDirectory + '/data/' + Paths.formatToSongPath(SONG.song) + '/'));
+		#end
+
+		for (folder in foldersToCheck)
+		{
+			if(FileSystem.exists(folder))
+			{
+				for (file in FileSystem.readDirectory(folder))
+				{
+					if(file == '.hxs' && !filesPushed.contains(file))
+					{
+						var expr = file;
+						var parser = new hscript.Parser();
+						var ast = parser.parseString(expr);
+						var interp = new hscript.Interp();
+						trace(interp.execute(ast));
+						filesPushed.push(file);
+					}
+				}
+			}
+		}
+		#end
+
 
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)

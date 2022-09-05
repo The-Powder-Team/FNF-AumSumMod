@@ -1,8 +1,8 @@
 FNF Vs AumSum Credits
-Isaiah Mods::isaiah::Creator of the mod::al-al.itch.io::0xE9184C
+Isaiah Mods::isaiah::Creator of the Mod::al-al.itch.io::0xE9184C
 Punkinator::punk::Psych Engine Mod Notes and Events::https://gamebanana.com/members/1687904::0xFFA500
 Catbrother Everything::catbro::Post Dialogue Script::https://www.youtube.com/c/catbrothereverything::0xE9184C
-Milky the Milk Blob::heneedsomemilk::Some Remade BG Assets and AumSussy Sprites::https://gamejolt.com/@MilkyTheBlob::0xFFFFFFFF
+Milky the Milk Blob::heneedsomemilk::Programmer::https://gamejolt.com/@MilkyTheBlob::0xFFFFFFFF
 Novikond and others::sara::Making the Sara HUD::https://gamebanana.com/members/1944617::0xB12EF7
 GoldenBoy1234::pfpnf::AumSum Tricky skin. It is a secret character. Enjoy finding the secret characters ;)::https://gamebanana.com/members/1924442::#FFD700
 NoahWantsDie::midipeople::FNF MIDIS, specifically thunderstorm, and IDK if I use any other midis from this dude so pls dont sue me.::https://www.youtube.com/channel/UCFgO7BfoaW7fIyW7qLW5cfw::0xB12EF7
@@ -11,6 +11,7 @@ ztgds::funnislippers::Furiosity MIDI::https://www.youtube.com/c/ztgds/featured::
 Aussie Axe::axe::Pineappled MIDI::https://www.youtube.com/c/AussieAxeAA::0xFF0400FF
 Other midi makers::midipeople::FNF MIDIS that if I used from people, creds to you. Please don't sue me. I forgor some creators of midis if I did.::https://www.google.com/search?q=fnf+midis&oq=fnf+midis&aqs=chrome..69i57j0i20i263i512j0i10l3j0i512j0i10l4.2401j0j7&sourceid=chrome&ie=UTF-8::0x6A0DAD
 LordRyan1999::lordryan::Maker of Marking Chaos::https://gamebanana.com/members/1670097::0xFF0400FF
+Magnumsrt::mag::Custom State Support::https://github.com/Magnumsrt::0xFF0400FF
 AmongBoy::amongboi::Did litteraly everything to make Vs. Big Nate::https://gamebanana.com/members/2132166::0xFF0400FF
 Saruky::saruky::Thunderstorm Composer::https://twitter.com/saruky__?lang=en::0xE9184C
 MoldyGH::mold::The FLPs of Cheating and Comecful, creator of Dave and Bambi Mod::https://twitter.com/moldy_gh::0xFF0400FF
