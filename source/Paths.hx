@@ -258,6 +258,11 @@ class Paths
 		return returnAsset;
 	}
 
+	inline static public function imageOld(key:String, ?library:String)
+		{
+			return getPath('images/$key.png', IMAGE, library);
+		}
+
 	// Usage: Paths.fromI8("imageIwant", "shared");
 	public static function fromI8(key:String, ?library:String):Null<Dynamic> {
 		var Description:String = null;

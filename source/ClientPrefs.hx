@@ -41,6 +41,7 @@ class ClientPrefs {
 	public static var pauseMusic:String = 'Tea Time';
 	public static var checkForUpdates:Bool = true;
 	public static var comboStacking = true;
+	public static var logLimit:Int = 250;
 	public static var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 
@@ -146,6 +147,7 @@ class ClientPrefs {
 		FlxG.save.data.pauseMusic = pauseMusic;
 		FlxG.save.data.checkForUpdates = checkForUpdates;
 		FlxG.save.data.comboStacking = comboStacking;
+		FlxG.save.data.logLimit = logLimit;
 	
 		FlxG.save.flush();
 
@@ -314,6 +316,10 @@ class ClientPrefs {
 		if (FlxG.save.data.comboStacking != null)
 		{
 			comboStacking = FlxG.save.data.comboStacking;
+		}
+		if (FlxG.save.data.logLimit != null)
+		{
+			logLimit = FlxG.save.data.logLimit;
 		}
 	
 		var save:FlxSave = new FlxSave();

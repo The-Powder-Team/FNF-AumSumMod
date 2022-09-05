@@ -1,19 +1,20 @@
 package;
 
 import flixel.FlxG;
-import openfl.utils.Assets;
-import lime.utils.Assets as LimeAssets;
+import flixel.system.FlxSound;
+import flixel.util.FlxColor;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
-import flixel.system.FlxSound;
+import lime.utils.Assets as LimeAssets;
+import openfl.utils.Assets;
+
+using StringTools;
 #if sys
-import sys.io.File;
 import sys.FileSystem;
+import sys.io.File;
 #else
 import openfl.utils.Assets;
 #end
-
-using StringTools;
 
 class CoolUtil
 {
@@ -148,5 +149,9 @@ class CoolUtil
 		#else
 		FlxG.openURL(site);
 		#end
+	}
+
+	public static function multiplyColors(c1:FlxColor, c2:FlxColor) {
+		return FlxColor.multiply(c1, c2);
 	}
 }

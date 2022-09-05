@@ -33,7 +33,7 @@ class LogMessage extends Sprite {
         icon.x = 2;
         icon.scrollRect = new Rectangle(iconID * 16, 0, 16, 16);
 
-        iconInnerSprite = new Bitmap(Assets.getBitmapData(Paths.image('ui/logs-icons', 'shared')));
+        iconInnerSprite = new Bitmap(Assets.getBitmapData(Paths.imageOld('ui/logs-icons', 'shared')));
 
         curColor = WindowsAPI.consoleColorToOpenFL(color);
         switch(color) {

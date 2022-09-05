@@ -69,7 +69,7 @@ class LogsOverlay extends Sprite {
             var e = new LogMessage(0, 0, thing, color);
             messages.push(e);
             logsText.addChild(e);
-            while(messages.length > Settings.engineSettings.data.logLimit)
+            while(messages.length > ClientPrefs.logLimit)
                 logsText.removeChild(messages.shift());
             tracedShit++;
         }
@@ -90,7 +90,7 @@ class LogsOverlay extends Sprite {
         titleText.selectable = false;
         titleText.textColor = 0xFFFFFFFF;
         titleText.defaultTextFormat = new TextFormat("Pixel Arial 11 Bold", 16);
-        titleText.text = 'YoshiCrafter Engine ${Main.engineVer}';
+        titleText.text = 'FNF Vs. AumSum';
 
         logsText = new Sprite();
 
@@ -137,7 +137,6 @@ class LogsOverlay extends Sprite {
 
         FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, function(e:KeyboardEvent)
         {
-            if (CoolUtil.isDevMode()) {
                 if (e.keyCode == Keyboard.F6) {
                     switchState();
                 }
@@ -184,9 +183,7 @@ class LogsOverlay extends Sprite {
                     }
                 }
                 
-            }
-            
-        });
+            });
         // cant import mouseEvent cause hxcpp is going to fuck itself
         FlxG.stage.addEventListener("mouseWheel", function(event:Dynamic) {
             wheel = event.delta;
@@ -210,7 +207,7 @@ class LogsOverlay extends Sprite {
         graphics.drawRect(0, 0, lime.app.Application.current.window.width, lime.app.Application.current.window.height);
         graphics.endFill();
 
-        if (!CoolUtil.isDevMode() && visible) {
+        if (visible) {
             switchState();
         }
 
