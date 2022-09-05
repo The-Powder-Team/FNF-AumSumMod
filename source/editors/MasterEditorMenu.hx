@@ -29,7 +29,8 @@ class MasterEditorMenu extends MusicBeatState
 		'Vanilla Animation Debug',
 		'Alphabet Debug',
 		'Chart Editor',
-        'Stage Editor (BUGGY)'
+        'Stage Editor (BUGGY)',
+		'File Explorer'
 	];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
 	private var directories:Array<String> = [null];
@@ -120,6 +121,8 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new CharacterEditorState(Character.DEFAULT_CHARACTER, false));
 				case 'Week Editor':
 					MusicBeatState.switchState(new WeekEditorState());
+				case 'File Explorer'://felt it would be cool maybe
+					LoadingState.loadAndSwitchState(new file_explorer.FileExplorer(), false);
 				case 'Menu Character Editor':
 					MusicBeatState.switchState(new MenuCharacterEditorState());	
 				case 'Dialogue Portrait Editor':
