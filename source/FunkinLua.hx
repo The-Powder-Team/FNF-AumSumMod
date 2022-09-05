@@ -3258,6 +3258,10 @@ class FunkinLua {
 		FunkinLua.hscriptVars.set('Character', Character);
 		FunkinLua.hscriptVars.set('Alphabet', Alphabet);
 		FunkinLua.hscriptVars.set('CustomSubstate', CustomSubstate);
+		FunkinLua.hscriptVars.set('WindowsAPI', WindowsAPI);
+		FunkinLua.hscriptVars.set('CoolSystemStuff', CoolSystemStuff);
+		FunkinLua.hscriptVars.set('CoolUtil', CoolUtil);
+		FunkinLua.hscriptVars.set('ColorblindFilters', ColorblindFilters);
 		#if !flash
 		FunkinLua.hscriptVars.set('FlxRuntimeShader', FlxRuntimeShader);
 		FunkinLua.hscriptVars.set('ShaderFilter', openfl.filters.ShaderFilter);
