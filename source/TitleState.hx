@@ -411,7 +411,7 @@ class TitleState extends MusicBeatState
 		ngSpr.antialiasing = ClientPrefs.globalAntialiasing;
 
 		
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "FNF Vs. AumSum v1.5", 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "FNF Vs. AumSum DE v0.5", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -678,7 +678,7 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = 'In association \nwith';
 				// credTextShit.screenCenter();
 				case 6:
-					createCoolText(['Made by', 'Isaiah Mods'], -40);
+					createCoolText(['OG Mod Made by', 'Isaiah Mods'], -40);
 				case 8:
 					addMoreText('idk', -40);
 					//ngSpr.visible = true;
