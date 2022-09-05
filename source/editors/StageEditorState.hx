@@ -227,7 +227,7 @@ class StageEditorState extends MusicBeatState
         var tab_group = new FlxUI(null, UI_box);
 		tab_group.name = "Add/Remove";
         
-        objectInputText = new FlxUIInputText(10, 30, 100, "examplefolder/example", 8);
+        objectInputText = new FlxUIInputText(10, 30, 100, "images/competitionbg", 8);
 
         tagInputText = new FlxUIInputText(objectInputText.x + 150, objectInputText.y, 100, "tag", 8);
 
@@ -326,7 +326,7 @@ class StageEditorState extends MusicBeatState
             saveCharacterCoords();
         });
 
-        saveAdvancedCoordsBtn = new FlxButton(saveCharacterCoordsBtn.x+85, saveCharacterCoordsBtn.y, 'Save Advanced Json', function() {
+        saveAdvancedCoordsBtn = new FlxButton(saveCharacterCoordsBtn.x+85, saveCharacterCoordsBtn.y, 'Save Json', function() {
             saveAdvancedJson();
         });
 
@@ -341,7 +341,7 @@ class StageEditorState extends MusicBeatState
 		stepper_Zoom.value = defaultcamzoom;
 		stepper_Zoom.name = 'stage_zoom';
 
-		var check_hideGirlfriend = new FlxUICheckBox(stepper_Zoom.x, stepper_Zoom.y+30, null, null, "Hide Girlfriend", 100);
+		var check_hideGirlfriend = new FlxUICheckBox(stepper_Zoom.x, stepper_Zoom.y+30, null, null, "Hide GF", 100);
 		check_hideGirlfriend.checked = !gf.visible;
 		check_hideGirlfriend.callback = function()
 		{
