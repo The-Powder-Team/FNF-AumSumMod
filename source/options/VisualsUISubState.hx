@@ -122,6 +122,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 		#end
+		
+		var option:Option = new Option('Combo Stacking',
+			"If unchecked, Ratings and Combo won't stack, saving on System Memory and making them easier to read",
+			'comboStacking',
+			'bool',
+			true);
+		addOption(option);
 
 		super();
 	}
