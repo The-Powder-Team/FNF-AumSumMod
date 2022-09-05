@@ -138,6 +138,13 @@ class VisualsUISubState extends BaseOptionsMenu
 		addOption(option);
 
 		super();
+
+		var option:Option = new Option('Log Limit', "Determines the maximium amount of logs",
+			'logLimit', 'int', 240);
+		addOption(option);
+
+		option.minValue = 1;
+		option.maxValue = 240;
 	}
 
 	var changedMusic:Bool = false;
