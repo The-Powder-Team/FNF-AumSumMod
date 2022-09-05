@@ -45,7 +45,7 @@ class WindowsAPI
     ')
 	public static function allocConsole()
 	{
-		LogsOverlay.consoleOpened = LogsOverlay.consoleVisible = true;
+		logging.LogsOverlay.consoleOpened = LogsOverlay.consoleVisible = true;
 		haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos)
 		{
 			// nothing here so that it keeps shit clean
@@ -67,7 +67,7 @@ class WindowsAPI
 		haxe.Log.trace = show ? function(v:Dynamic, ?infos:haxe.PosInfos)
 		{
 		} : Main.baseTrace;
-		LogsOverlay.consoleVisible = show;
+		logging.LogsOverlay.consoleVisible = show;
 	}
 
 	#if windows

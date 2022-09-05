@@ -3261,7 +3261,7 @@ class FunkinLua {
 		FunkinLua.hscriptVars.set('WindowsAPI', WindowsAPI);
 		FunkinLua.hscriptVars.set('CoolSystemStuff', CoolSystemStuff);
 		FunkinLua.hscriptVars.set('CoolUtil', CoolUtil);
-		FunkinLua.hscriptVars.set('ColorblindFilters', ColorblindFilters);
+		//FunkinLua.hscriptVars.set('ColorblindFilters', ColorblindFilters);
 		#if !flash
 		FunkinLua.hscriptVars.set('FlxRuntimeShader', FlxRuntimeShader);
 		FunkinLua.hscriptVars.set('ShaderFilter', openfl.filters.ShaderFilter);
