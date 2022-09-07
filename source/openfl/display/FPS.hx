@@ -1,10 +1,10 @@
 package openfl.display;
 
-import flixel.math.FlxMath;
 import haxe.Timer;
 import openfl.events.Event;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
+import flixel.math.FlxMath;
 #if gl_stats
 import openfl.display._internal.stats.Context3DStats;
 import openfl.display._internal.stats.DrawCallContext;
@@ -30,10 +30,10 @@ class FPS extends TextField
 	/**
 		The current frame rate, expressed using frames-per-second
 	**/
-	
 	public var currentFPS(default, null):Int;
 	private var memoryMegas:Float = 0;
 	private var memoryTotal:Float = 0;
+	private var memoryMegasPeak:Float = 0;
 
 	@:noCompletion private var cacheCount:Int;
 	@:noCompletion private var currentTime:Float;
@@ -46,12 +46,13 @@ class FPS extends TextField
 		this.x = x;
 		this.y = y;
 
-		currentFPS = 0;
+		currentFPS = 144;
 		selectable = false;
-		mouseEnabled = false;
-		defaultTextFormat = new TextFormat("_sans", 14, color);
+		mouseEnabled = true;
+		defaultTextFormat =  new TextFormat (Paths.font("vcr.ttf"), 13, color); //this is how to change you're fonts, piss babies
 		autoSize = LEFT;
 		multiline = true;
+		text = "FPS: ";
 
 		cacheCount = 0;
 		currentTime = 0;
@@ -84,27 +85,21 @@ class FPS extends TextField
 
 		if (currentCount != cacheCount /*&& visible*/)
 		{
-			text = '';
-			if (ClientPrefs.showFPS) text += "FPS: " + currentFPS + "\n";
+			text = "FPS: " + currentFPS;
+			var memoryMegas:Float = 0;
 			
 			#if openfl
 			memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));
+			
+			if (memoryMegas > memoryMegasPeak) memoryMegasPeak = memoryMegas;
 
-			if (memoryMegas > memoryTotal) memoryTotal = memoryMegas;
-
-			if (ClientPrefs.showMEM) text += memoryMegas + " MB / " + memoryTotal + " MB";
+			if (ClientPrefs.showMEM) text += "\nMEM: " + memoryMegas + " RAM" + "\nMEM PEAK: " + memoryMegasPeak + " RAM";
 			#end
 
-			if (text != null || text != '')
-			{
-				if (Main.fpsVar != null)
-					Main.fpsVar.visible = true;
-			}
-
-			textColor = 0xFFFFFFFF;
+			textColor = 0xFF9C9C9C;
 			if (memoryMegas > 3000 || currentFPS <= ClientPrefs.framerate / 2)
 			{
-				textColor = 0xFFFF0000;
+				textColor = 0xFFFF0037;
 			}
 
 			#if (gl_stats && !disable_cffi && (!html5 || !canvas))
