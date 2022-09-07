@@ -1,0 +1,9 @@
+name: Misc
+description: REQUESTING FOR  WILL RESULT IN A BAN, I ALREADY SAID I WILL DO IT LATER GOD DAMN IT.
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes:
+      label: What is your issue?
+    validations:
+      required: true
