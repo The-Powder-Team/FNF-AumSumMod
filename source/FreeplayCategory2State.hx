@@ -336,9 +336,7 @@ class FreeplayCategory2State extends MusicBeatState{
 				#end
 			}
 		}
-		if (curSelected == 1 && accepted)
-		MusicBeatState.switchState(new dumb.WorldState());
-		else if (accepted && curSelected != 1)
+        if (accepted && curSelected != 1)
 		{
 			persistentUpdate = false;
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
