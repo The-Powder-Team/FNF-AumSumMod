@@ -11,6 +11,7 @@ class ScriptHandler extends SScript
     public function new(file:String, ?preset:Bool = true)
     {
         super(file, preset);
+    }
 
     override public function preset():Void
     {
