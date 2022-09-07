@@ -39,7 +39,7 @@ class FPS extends TextField
 	@:noCompletion private var currentTime:Float;
 	@:noCompletion private var times:Array<Float>;
 
-	public function new(x:Float = 10, y:Float = 10, color:Int = 0x000000)
+	public function new(x:Float = 10, y:Float = 10, color:Int = 0xFFFFFF)
 	{
 		super();
 
@@ -96,7 +96,7 @@ class FPS extends TextField
 			if (ClientPrefs.showMEM) text += "\nMEM: " + memoryMegas + " RAM" + "\nMEM PEAK: " + memoryMegasPeak + " RAM";
 			#end
 
-			textColor = 0xFF9C9C9C;
+			textColor = 0xFFFFFFFF;
 			if (memoryMegas > 3000 || currentFPS <= ClientPrefs.framerate / 2)
 			{
 				textColor = 0xFFFF0037;
