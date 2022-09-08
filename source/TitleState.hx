@@ -411,7 +411,7 @@ class TitleState extends MusicBeatState
 		ngSpr.antialiasing = ClientPrefs.globalAntialiasing;
 
 		
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "FNF Vs. AumSum DE v0.5", 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "FNF Vs. AumSum DE v0.5.1", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
