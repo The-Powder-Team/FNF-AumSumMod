@@ -3258,7 +3258,9 @@ class FunkinLua {
 		FunkinLua.hscriptVars.set('Character', Character);
 		FunkinLua.hscriptVars.set('Alphabet', Alphabet);
 		FunkinLua.hscriptVars.set('CustomSubstate', CustomSubstate);
+		#if windows
 		FunkinLua.hscriptVars.set('WindowsAPI', WindowsAPI);
+		#end
 		FunkinLua.hscriptVars.set('CoolUtil', CoolUtil);
 		FunkinLua.hscriptVars.set('Mathf', math.Mathf);
 		FunkinLua.hscriptVars.set('EtternaFunctions', EtternaFunctions);
