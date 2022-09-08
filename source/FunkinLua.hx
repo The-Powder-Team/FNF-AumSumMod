@@ -3261,6 +3261,7 @@ class FunkinLua {
 		FunkinLua.hscriptVars.set('WindowsAPI', WindowsAPI);
 		FunkinLua.hscriptVars.set('CoolUtil', CoolUtil);
 		FunkinLua.hscriptVars.set('Mathf', math.Mathf);
+		FunkinLua.hscriptVars.set('EtternaFunctions', EtternaFunctions);
 		FunkinLua.hscriptVars.set('Vector3', math.Vector3);
 		//FunkinLua.hscriptVars.set('ColorblindFilters', ColorblindFilters);
 		#if !flash
