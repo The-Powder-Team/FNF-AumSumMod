@@ -392,8 +392,16 @@ class TitleState extends MusicBeatState
 		add(credGroup);
 		textGroup = new FlxGroup();
 
-		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0x061D27);
+		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		credGroup.add(blackScreen);
+
+		oopsBG = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('aumsum_title_bg'));
+		credGroup.add(oopsBG);
+		oopsBG.visible = true;
+		oopsBG.setGraphicSize(Std.int(FlxG.width * 0.8));
+		oopsBG.updateHitbox();
+		oopsBG.screenCenter(X);
+		oopsBG.antialiasing = ClientPrefs.globalAntialiasing;
 
 		credTextShit = new Alphabet(0, 0, "", true);
 		credTextShit.screenCenter();
