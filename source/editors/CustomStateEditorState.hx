@@ -44,9 +44,12 @@ class CustomStateEditorState extends MusicBeatState
 	}
 
 
-	override function update(elapsed:Float)
-	{
-		super.update(elapsed);
-
-	}
+    override function update(elapsed:Float)
+        {
+            if(FlxG.keys.justPressed.ESCAPE)
+                {
+                    FlxG.switchState(new MasterEditorMenu());
+                }
+            super.update(elapsed);
+        }
 }
