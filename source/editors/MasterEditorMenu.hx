@@ -136,8 +136,8 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new AlphabetTest(), false);
 				case 'Chart Editor'://felt it would be cool maybe
 					LoadingState.loadAndSwitchState(new ChartingState(), false);
-				case 'Stage Debug'://felt it would be cool maybe
-					LoadingState.loadAndSwitchState(new StageDebugState(), false);
+				/*case 'Stage Debug'://felt it would be cool maybe
+					LoadingState.loadAndSwitchState(new StageDebugState(), false);*/
 				case 'Stage Editor (BUGGY)': // i'll finish it somedays... maybe....
 					LoadingState.loadAndSwitchState(new StageEditorState(), false);
 				case 'State Editor (BUGGY)': // i'll finish it somedays... maybe....

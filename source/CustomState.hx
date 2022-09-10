@@ -91,9 +91,9 @@ class CustomState extends MusicBeatState
 						add(newalphabetlayer);
 					}
 		
-					if(FileSystem.exists(Paths.hx('mods/custom_states/${statename}')))
+					if(FileSystem.exists(Paths.hx('custom_states/${statename}')))
 						{
-							var expr = File.getContent(Paths.hx('mods/custom_states/' + statename));
+							var expr = File.getContent(Paths.hx('custom_states/' + statename));
 							var parser = new hscript.Parser();
 							parser.allowTypes = true;
 							parser.allowJSON = true;

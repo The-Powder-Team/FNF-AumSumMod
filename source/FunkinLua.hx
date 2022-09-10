@@ -3263,7 +3263,7 @@ class FunkinLua {
 		FunkinLua.hscriptVars.set("FlxPoint", flixel.math.FlxPoint);
 		FunkinLua.hscriptVars.set("FlxText", flixel.text.FlxText);
 		FunkinLua.hscriptVars.set("FlxRect", flixel.math.FlxRect);
-		FunkinLua.hscriptVars.set('ShadersDave', ShadersDave);
+		//FunkinLua.hscriptVars.set('ShadersDave', ShadersDave);
 		FunkinLua.hscriptVars.set("FlxTrail", flixel.addons.effects.FlxTrail);
 		FunkinLua.hscriptVars.set("FlxTrailArea", flixel.addons.effects.FlxTrailArea);
 		FunkinLua.hscriptVars.set("FlxEffectSprite", flixel.addons.effects.chainable.FlxEffectSprite);
