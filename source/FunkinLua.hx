@@ -3258,6 +3258,23 @@ class FunkinLua {
 		FunkinLua.hscriptVars.set('Character', Character);
 		FunkinLua.hscriptVars.set('Alphabet', Alphabet);
 		FunkinLua.hscriptVars.set('CustomSubstate', CustomSubstate);
+		FunkinLua.hscriptVars.set("FlxButton", flixel.ui.FlxButton);
+		FunkinLua.hscriptVars.set('CustomState', CustomState);
+		FunkinLua.hscriptVars.set("FlxPoint", flixel.math.FlxPoint);
+		FunkinLua.hscriptVars.set("FlxText", flixel.text.FlxText);
+		FunkinLua.hscriptVars.set("FlxRect", flixel.math.FlxRect);
+		FunkinLua.hscriptVars.set('ShadersDave', ShadersDave);
+		FunkinLua.hscriptVars.set("FlxTrail", flixel.addons.effects.FlxTrail);
+		FunkinLua.hscriptVars.set("FlxTrailArea", flixel.addons.effects.FlxTrailArea);
+		FunkinLua.hscriptVars.set("FlxEffectSprite", flixel.addons.effects.chainable.FlxEffectSprite);
+		FunkinLua.hscriptVars.set("FlxWaveEffect", flixel.addons.effects.chainable.FlxWaveEffect);
+		FunkinLua.hscriptVars.set("FlxTransitionableState", flixel.addons.transition.FlxTransitionableState);
+		FunkinLua.hscriptVars.set("FlxGridOverlay", flixel.addons.display.FlxGridOverlay);
+        FunkinLua.hscriptVars.set("StageData", StageData);
+		FunkinLua.hscriptVars.set("FlxObject", flixel.FlxObject);
+		FunkinLua.hscriptVars.set("FlxGame", flixel.FlxGame);
+		FunkinLua.hscriptVars.set("FlxState", flixel.FlxState);
+		FunkinLua.hscriptVars.set("FlxSubState", flixel.FlxSubState);
 		#if windows
 		FunkinLua.hscriptVars.set('WindowsAPI', WindowsAPI);
 		#end
@@ -3424,7 +3441,7 @@ class HScript
 		var vars = FunkinLua.hscriptVars;
 		for (i in vars.keys())
 			if (!interp.variables.exists(i))
-				interp.variables.set(i, vars.get(i));
+				FunkinLua.hscriptVars.set(i, vars.get(i));
 	}
 
 	public function execute(codeToRun:String):Dynamic
