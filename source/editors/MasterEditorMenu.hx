@@ -26,10 +26,12 @@ class MasterEditorMenu extends MusicBeatState
 		'Dialogue Editor',
 		'Dialogue Portrait Editor',
 		'Character Editor',
+		'Event Editor',
 		'Vanilla Animation Debug',
 		'Alphabet Debug',
 		'Chart Editor',
-        'Stage Editor (BUGGY)'
+        'Stage Editor (BUGGY)',
+		'State Editor (BUGGY)'
 	];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
 	private var directories:Array<String> = [null];
@@ -126,6 +128,8 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new DialogueCharacterEditorState(), false);
 				case 'Dialogue Editor':
 					LoadingState.loadAndSwitchState(new DialogueEditorState(), false);
+				case 'Event Editor':
+					LoadingState.loadAndSwitchState(new MidSongEventEditorState(), false);
 				case 'Vanilla Animation Debug':
 					LoadingState.loadAndSwitchState(new AnimationDebug(), false);
 				case 'Alphabet Debug':
@@ -134,6 +138,8 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new ChartingState(), false);
 				case 'Stage Editor (BUGGY)': // i'll finish it somedays... maybe....
 					LoadingState.loadAndSwitchState(new StageEditorState(), false);
+				case 'State Editor (BUGGY)': // i'll finish it somedays... maybe....
+					LoadingState.loadAndSwitchState(new CustomStateEditorState(), false);
 			}
 			FlxG.sound.music.volume = 0;
 			#if PRELOAD_ALL
