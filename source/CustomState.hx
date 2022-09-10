@@ -121,7 +121,7 @@ class CustomState extends MusicBeatState
 					newFlxSprite.frames = Paths.getSparrowAtlas(image);
 				}
 			else{
-				newFlxSprite.loadGraphic(Paths.loadImage(image));
+				newFlxSprite.loadGraphic(Paths.image(image));
 			}
 			if(spritesheetbool == true)
 				{
