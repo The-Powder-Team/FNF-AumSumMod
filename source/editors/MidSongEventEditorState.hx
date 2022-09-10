@@ -27,7 +27,7 @@ import Discord.DiscordClient;
 
 using StringTools;
 
-class MidSongEventEditor extends MusicBeatState
+class MidSongEventEditorState extends MusicBeatState
 {
     var bg:FlxSprite;
     var eventName:FlxUIInputText;
@@ -46,7 +46,7 @@ class MidSongEventEditor extends MusicBeatState
         }
 	override function create()
         {
-            bg = new FlxSprite(-100).loadGraphic(Paths.loadImage('stageback'));
+            bg = new FlxSprite(-100).loadGraphic(Paths.image('stageback'));
             bg.scrollFactor.x = 0;
             bg.scrollFactor.y = 0.10;
             bg.setGraphicSize(Std.int(bg.width * 1.1));
