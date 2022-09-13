@@ -52,7 +52,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			['Mid-Fight Masses', 'Static', 'Eccentric', 'Off']);
 		addOption(option);
 
-		var option:Option = new Option('Dave and Bambi Miss Style', 'What the frick is this for?',
+		var option:Option = new Option('Dave and Bambi Miss', 'What the frick is this for?',
 			'daveMiss', 'bool', false);
 		addOption(option);
 
