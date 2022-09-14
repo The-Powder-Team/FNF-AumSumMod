@@ -96,6 +96,24 @@
 				255,
 				255
 			]
+		],
+		[
+			"Wimpy",
+			"aumsum-narrator-new",
+			[
+				255,
+				216,
+				0
+			]
+		],
+		[
+			"IP",
+			"i-have-your-ip-address",
+			[
+				255,
+				255,
+				255
+			]
 		]
 	],
 	"hideStoryMode": false,

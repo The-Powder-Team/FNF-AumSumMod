@@ -1,11 +1,46 @@
 {
 	"song": {
-		"speed": 2.5,
-		"stage": null,
-		"player1": "bf",
-		"player2": "dad",
-		"player3": null,
 		"events": [
+			[
+				0,
+				[
+					[
+						"Set GF Speed",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				10267.3796791444,
+				[
+					[
+						"Set GF Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				20534.7593582888,
+				[
+					[
+						"Set GF Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				41069.5187165775,
+				[
+					[
+						"Set GF Speed",
+						"2",
+						""
+					]
+				]
+			],
 			[
 				61604.2780748662,
 				[
@@ -17,6 +52,16 @@
 					[
 						"Change Scroll Speed",
 						"1.1",
+						""
+					]
+				]
+			],
+			[
+				61604.2780748662,
+				[
+					[
+						"Set GF Speed",
+						"1",
 						""
 					]
 				]
@@ -440,15 +485,27 @@
 						""
 					]
 				]
+			],
+			[
+				104197.860962567,
+				[
+					[
+						"Add Camera Zoom",
+						"0.115",
+						""
+					]
+				]
+			],
+			[
+				104438.502673797,
+				[
+					[
+						"Add Camera Zoom",
+						"0.115",
+						""
+					]
+				]
 			]
-		],
-		"notes": [],
-		"splashSkin": null,
-		"validScore": false,
-		"gfVersion": "gf",
-		"bpm": 187,
-		"arrowSkin": null,
-		"needsVoices": true,
-		"song": "Squid Games"
+		]
 	}
 }
