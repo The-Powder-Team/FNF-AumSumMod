@@ -129,7 +129,7 @@ class MasterEditorMenu extends MusicBeatState
 				case 'Dialogue Editor':
 					LoadingState.loadAndSwitchState(new DialogueEditorState(), false);
 				case 'Event Editor':
-					LoadingState.loadAndSwitchState(new MidSongEventEditorState(), false);
+					LoadingState.loadAndSwitchState(new MidSongEventEditorOldState(), false);
 				case 'Vanilla Animation Debug':
 					LoadingState.loadAndSwitchState(new AnimationDebug(), false);
 				case 'Alphabet Debug':
