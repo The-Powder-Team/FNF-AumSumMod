@@ -53,7 +53,7 @@ import editors.CharacterEditorState;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.keyboard.FlxKey;
 import Note.EventNote;
-import AumSumEvent;
+//import AumSumEvent;
 import openfl.events.KeyboardEvent;
 import flixel.effects.particles.FlxEmitter;
 import flixel.effects.particles.FlxParticle;
